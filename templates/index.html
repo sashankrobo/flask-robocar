@@ -1,0 +1,50 @@
+<style>
+.button1 {
+  background-color: darkolivegreen; /* Green */
+  border: none;
+  color: black;
+  #padding: 15px 32px;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 30px;
+}
+.button2 {
+  background-color: darkslateblue; /* Green */
+  border: none;
+  color: black;
+  position:absolute;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  display: inline-block;
+  font-size: 30px;
+}
+</style>
+<form action="/forward/" method="post">
+    <button name="forwardBtn" type="submit" class=button1 style="position: absolute; left: 20%  ">FORWARD</button>
+</form>
+<form action="/left/" method="post">
+    <button name="leftBtn" type="submit" class=button1 style="position: absolute; top:20% ">LEFT</button>
+</form>
+<form action="/stop/" method="post">
+    <button name="stopBtn" class=button2 type="submit" style="position: absolute; left:25%; top:20% " >STOP</button>
+</form>
+<form action="/right/" method="post">
+    <button name="rightBtn" type="submit" class=button1 style="position: absolute; left: 40%; top:20%  ">RIGHT</button>
+</form>
+
+<form action="/reverse/" method="post">
+    <button name="reverseBtn" type="submit" class=button1 style="position:absolute; left:20%;top:40% " >REVERSE</button>
+</form>
+<form action="/shutdown/" method="post">
+    <button name="reverseBtn" type="submit" class=button1 style="position:absolute; left:20%;top:60%; background-color:darkred;color:yellow; " >SHUTDOWN</button>
+</form>
+<body>
+    <img src="{{ url_for('video_feed') }}" align="right">
+</body>
